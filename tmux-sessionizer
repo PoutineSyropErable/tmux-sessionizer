@@ -69,7 +69,12 @@ while [[ "$#" -gt 0 ]]; do
 		echo "Usage: tmux-sessionizer [OPTIONS] [SEARCH_PATH]"
 		echo "Options:"
 		echo "  -h, --help             Display this help message"
-		echo "  -s, --session <name>   session command index."
+
+		echo "  -s, --session <name>   session command index. "
+		echo " Selects a command: It takes an index number that corresponds to a command in the TS_SESSION_COMMANDS array"
+		echo " Runs in special window: Executes the command in a high-numbered window (starting from window 69)"
+		echo " to avoid interfering with your regular workflow windows"
+
 		echo "  --vsplit               Create vertical split (horizontal layout) for session command"
 		echo "  --hsplit               Create horizontal split (vertical layout) for session command"
 		exit 0
